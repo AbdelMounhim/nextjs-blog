@@ -42,6 +42,8 @@ export default function Home({ allPostsData }) {
 // It will never run on the client-side.
 // It won’t even be included in the JS bundle for the browser
 
+// In production, getStaticProps runs at build time.
+
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return {
